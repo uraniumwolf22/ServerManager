@@ -8,6 +8,66 @@
     <script defer type="text/javascript" src="main.js"></script>
   </head>
   <body>
+    <div id="content">
 
+      <ol id="app-bar">
+        <li class="panel app" draggable="true">
+          <img src="box.svg" draggable="false">
+          <span class="app-title">App Title</span>
+        </li>
+        <li class="panel app" draggable="true">
+          <img src="box.svg" draggable="false">
+          <span class="app-title">App Title</span>
+        </li>
+        <li class="panel app" draggable="true">
+          <img src="box.svg" draggable="false">
+          <span class="app-title">App Title</span>
+        </li>
+        <li class="panel app" draggable="true">
+          <img src="box.svg" draggable="false">
+          <span class="app-title">App Title</span>
+        </li>
+        <button class="panel app" id="add-app">+</button>
+      </ol>
+
+      <div id="server-list">
+        <div class="panel server">
+          <div style="display:flex;justify-content:space-between;">
+            <div style="text-align:left;">
+              <span class="server-title">Server Name</span>
+              <span class="server-ip">192.168.0.0</span>
+            </div>
+            <div class="server-status"></div>
+          </div>
+          <ol id="app-list">
+            <div class="active-app">
+              <img src="box.svg" draggable="false">
+              <div style="text-align: left;">
+                <p class="app-title">App Title</p>
+                <span class="app-status">Active</span>
+              </div>
+              <div style="display:flex;">
+                <button class="show-console">>_</button>
+                <button class="stop-app">✖</button>
+              </div>
+            </div>
+            <div class="active-app"></div>
+            <div class="active-app"></div>
+          </ol>
+        </div>
+        <div class="panel server">
+
+        </div>
+        <div class="panel server">
+
+        </div>
+      </div>
+
+      <div class="panel">
+        <span class="server-title">Server Name<span class="app-title"> ⮞ App Title</span></span>
+        <textarea id="console" disabled>>_</textarea>
+      </div>
+
+    </div>
   </body>
 </html>

@@ -1,0 +1,207 @@
+*,
+*:after,
+*:before {
+  box-sizing  : border-box;
+  margin      : 0;
+  padding     : 0;
+  outline     : none;
+  font-family : "Roboto",
+                sans-serif;
+}
+
+body {
+  display          : flex;
+  padding          : 40px;
+  overflow         : hidden;
+  background-color : #CBD0D9;
+  align-items      : center;
+  justify-content  : center;
+  user-select      : none;
+}
+
+ol,
+ul {
+  list-style : none;
+}
+
+#content {
+  width     : 80vw;
+  max-width : 800px;
+}
+
+.panel {
+  padding          : 6px;
+  border           : 1px solid #7B8394;
+  border-radius    : 12px;
+  background-color : #F5F6FA;
+  box-shadow       : 2px 2px 6px #7B839460;
+  text-align       : center;
+  transition       : box-shadow,
+                     0.15s;
+}
+
+.panel:hover {
+  box-shadow : 2px 2px 8px #7B8394A0;
+}
+
+#app-bar {
+  display       : flex;
+  margin-bottom : 32px;
+}
+
+.app {
+  z-index         : 0;
+  display         : flex;
+  min-width       : 64px;
+  min-height      : 64px;
+  border-right    : none;
+  border-radius   : 0;
+  align-items     : center;
+  flex            : 1 1 auto;
+  flex-flow       : column;
+  justify-content : center;
+  transition      : background-color,
+                    flex,
+                    .15s;
+  cursor          : move;
+}
+
+.app:hover {
+  background-color : #E4E6EB;
+  flex             : 1.5 1 auto;
+  transition       : background-color,
+                     flex,
+                     .15s;
+}
+
+.app:first-child {
+  border-right  : none;
+  border-radius : 12px 0px 0px 12px;
+}
+
+.app:last-child {
+  border-right  : 1px solid #7B8394;
+  border-radius : 0px 12px 12px 0px;
+}
+
+img {
+  width   : 36px;
+  height  : 36px;
+  opacity : 0.25;
+}
+
+.app-title {
+  color       : #7B8394;
+  font-weight : 400;
+}
+
+#add-app {
+  min-width : 20px;
+  max-width : 46px;
+  color     : #7B8394;
+  font-size : 26px;
+}
+
+#server-list {
+  display         : flex;
+  margin-bottom   : 32px;
+  justify-content : space-between;
+}
+
+.server {
+  min-height : 160px;
+  margin     : 0px 10px;
+  flex       : 1 1 0px;
+}
+
+.server:first-child {
+  margin-left : 0;
+}
+
+.server:last-child {
+  margin-right : 0;
+}
+
+.server-title {
+  display     : block;
+  color       : #323B4B;
+  font-weight : 500;
+}
+
+.server-ip {
+  color       : #7B8394;
+  font-size   : 14px;
+  font-weight : 400;
+}
+
+.server-status {
+  width            : 16px;
+  height           : 16px;
+  margin-left      : 10px;
+  border           : 1px solid #9AA1B1;
+  border-radius    : 50%;
+  background-color : #CBD0D9;
+  filter           : saturate(4) hue-rotate(260deg);
+}
+
+.active-app {
+  display          : flex;
+  margin-top       : 6px;
+  padding          : 6px;
+  border           : 1px solid #9AA1B1;
+  border-radius    : 12px;
+  background-color : #E4E6EB;
+  justify-content  : space-between;
+  min-height: 48px;
+}
+
+.active-app .app-title {
+  color       : #616A7C;
+  font-weight : 500;
+}
+
+.active-app span {
+  color     : #7B8394;
+  font-size : 14px;
+}
+
+.active-app button:hover {
+  background-color: #E4E6EB;
+}
+
+.active-app button:active {
+  background-color: #E4E6EB;
+  box-shadow       : inset 1px 1px 4px #7B839460;
+}
+
+.show-console,
+.stop-app {
+  width     : 32px;
+  height    : 100%;
+  margin    : 0;
+  color     : #7B8394;
+  border    : 1px solid #9AA1B1;
+  font-size : 16px;
+}
+
+.show-console {
+  border-right  : none;
+  border-radius : 8px 0px 0px 8px;
+}
+
+.stop-app {
+  border-radius : 0px 8px 8px 0px;
+}
+
+#console {
+  width            : 100%;
+  min-height       : 200px;
+  margin-top       : 6px;
+  padding          : 6px;
+  color            : #525C6D;
+  border           : 1px solid #9AA1B1;
+  border-radius    : 12px;
+  background-color : #E4E6EB;
+  font-size        : 15px;
+  resize           : vertical;
+}
